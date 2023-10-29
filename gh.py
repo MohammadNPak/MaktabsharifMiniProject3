@@ -11,7 +11,7 @@ icon_files = sorted(glob.glob('*-icon*.png', root_dir=path_icon, recursive=True,
 
 with open('Icons.txt', 'w') as iconfile:
     for icon_file in icon_files:
-        iconfile.write(f"{path_icon}/{icon_file}\n")
+        iconfile.write(f"{path_icon}\{icon_file}\n")
 
 
 path_html = str(Path.cwd().joinpath("front"))
