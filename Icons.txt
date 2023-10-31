@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\ehsan\MaktabsharifMiniProject3\front\images\call-icon.png
 C:\Users\ehsan\MaktabsharifMiniProject3\front\images\fb-icon-1.png
 C:\Users\ehsan\MaktabsharifMiniProject3\front\images\fb-icon.png
@@ -9,3 +10,16 @@ C:\Users\ehsan\MaktabsharifMiniProject3\front\images\mail-icon.png
 C:\Users\ehsan\MaktabsharifMiniProject3\front\images\serach-icon.png
 C:\Users\ehsan\MaktabsharifMiniProject3\front\images\twitter-icon-1.png
 C:\Users\ehsan\MaktabsharifMiniProject3\front\images\twitter-icon.png
+=======
+C:\Users\bcz\Desktop\MaktabSherif\week12\miniproject\MaktabsharifMiniProject3-1\front\images/call-icon.png
+C:\Users\bcz\Desktop\MaktabSherif\week12\miniproject\MaktabsharifMiniProject3-1\front\images/fb-icon-1.png
+C:\Users\bcz\Desktop\MaktabSherif\week12\miniproject\MaktabsharifMiniProject3-1\front\images/fb-icon.png
+C:\Users\bcz\Desktop\MaktabSherif\week12\miniproject\MaktabsharifMiniProject3-1\front\images/instagram-icon-1.png
+C:\Users\bcz\Desktop\MaktabSherif\week12\miniproject\MaktabsharifMiniProject3-1\front\images/instagram-icon.png
+C:\Users\bcz\Desktop\MaktabSherif\week12\miniproject\MaktabsharifMiniProject3-1\front\images/like-icon.png
+C:\Users\bcz\Desktop\MaktabSherif\week12\miniproject\MaktabsharifMiniProject3-1\front\images/linkedin-icon-1.png
+C:\Users\bcz\Desktop\MaktabSherif\week12\miniproject\MaktabsharifMiniProject3-1\front\images/mail-icon.png
+C:\Users\bcz\Desktop\MaktabSherif\week12\miniproject\MaktabsharifMiniProject3-1\front\images/serach-icon.png
+C:\Users\bcz\Desktop\MaktabSherif\week12\miniproject\MaktabsharifMiniProject3-1\front\images/twitter-icon-1.png
+C:\Users\bcz\Desktop\MaktabSherif\week12\miniproject\MaktabsharifMiniProject3-1\front\images/twitter-icon.png
+>>>>>>> Ghasemi
