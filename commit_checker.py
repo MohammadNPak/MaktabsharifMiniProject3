@@ -2,7 +2,7 @@ import requests
 import json
 from typing import Optional
 class ApiClient:
-    url = "https://api.github.com/repos/MohRezam/MaktabsharifMiniProject3/commits"
+    url = "https://api.github.com/repos/MohRezam/MaktabsharifMiniProject3/branches"
     def __init__(self,api_token:str) -> None:
         self.api_token = api_token
         self.session = requests.session()
@@ -13,7 +13,7 @@ class ApiClient:
     def get_commit_data(self) -> dict:
         commit_data = requests.get(self.url)
         commit_data.raise_for_status()
-        return commit_data.json()
+        return commit_data.json()[0]["commit"]
 class ApiClientConnection:
     def __init__(self,api_token:str) -> None:
         self.api_token = api_token
