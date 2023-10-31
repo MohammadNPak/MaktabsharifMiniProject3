@@ -1,6 +1,7 @@
 import requests
-token = "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"
+import json
+token = "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"
 headers = {'Authorization':f'Bearer {token}','accept': 'application/vnd.github+json'}
-url = "https://api.github.com/repos/ehsan-asg/MaktabsharifMiniProject3/commits"
+url = "https://api.github.com/repos/MohRezam/MaktabsharifMiniProject3/commits/ehsan-asgari"
 login = requests.get(url,headers=headers)
-print(login.json())
+print(login.text)
