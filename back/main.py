@@ -1,5 +1,4 @@
 from pathlib import Path
-from bs4 import BeautifulSoup
 import re
 
 
@@ -10,7 +9,7 @@ class PathNotFoundError(Exception):
         return self.msg
 
 
-def searchSorting (address): 
+def searchSorting (addrs): 
     return  sorted(addrs.glob("*"))
 
 def getaddress(address):
@@ -25,34 +24,32 @@ def witre_on_txt(filetext):
             file.write(str(i)+"\n")
     return "done"
 
-addrs = getaddress('/Users/SMD/Desktop/GW2/MaktabsharifMiniProject3/front/images/')
 # pathInput = input("Please Enter your Path: ")
 
-sorted_list = searchSorting(addrs)
-
-
-
-icon = addrs.glob("*icon*")
+icon_adr = getaddress('/Users/SMD/Desktop/GW2/MaktabsharifMiniProject3/front/images/')
+html_adr = getaddress('/Users/SMD/Desktop/GW2/MaktabsharifMiniProject3/front')
+sorted_list = searchSorting(icon_adr)
+icon = icon_adr.glob("*icon*")
+html_files = html_adr.glob(".html")
+for i in html_files:
+    print(i)
+print(html_files)
 print(witre_on_txt(icon))
 
 def replace_icon_dir(html):
-    with open(html , "r")as file:
-        a = file.read()
-    return a
-    # icons = re.findall('*icon*', a)
-    # return icons
+    file = '/Users/SMD/Desktop/GW2/MaktabsharifMiniProject3/front/index.html'
+    with open(file,"r") as f:
+        data = f.readlines()
+
+    with open(file, "w") as file_data:
+        pattern = re.compile('(images.*-icon.*png)')
+        for i in data:
+
+            if re.search(pattern,i): 
+                file_data.writelines(i.replace("images","icon"))
+            else:
+                file_data.writelines(i)
+            
+    
     
 
-
-
-# html = replace_icon_dir('/Users/SMD/Desktop/GW2/MaktabsharifMiniProject3/front/about.html')
-
-
-with open('/Users/SMD/Desktop/GW2/MaktabsharifMiniProject3/front/index.html',"r") as f:
-    data = f.read()
-    images = re.findall('(images.*-icon.*png)',data)
-    
-   
-    print(images)
-   
-    
