@@ -1,6 +1,6 @@
 from pathlib import Path
 import re
-
+from Exceptions import FileOpenError
 def find_html_files_and_update_icons():
     old_path = "images/"
     new_path = "Icons/"
@@ -15,8 +15,8 @@ def find_html_files_and_update_icons():
             
             new_html_file = Path(html_file.name)
             new_html_file.write_text(new_html_content)
-        except Exception as e:
-            print(f"An error occurred while processing {html_file}: {e}")
+        except FileOpenError as e:
+            raise (f"An error occurred while processing {html_file}: {e}")
 
 if __name__ == "__main":
     find_html_files_and_update_icons()

@@ -1,6 +1,6 @@
 from pathlib import Path
 import re
-from Exceptions import *
+from Exceptions import FileOpenError,CustomExceptions
 
 def find_icon_dir():
     try:
