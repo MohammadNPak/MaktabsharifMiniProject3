@@ -12,11 +12,11 @@ def find_html_files_and_update_icons():
             
             pattern = re.compile(r'(?<=")' + re.escape(old_path) + r'(?=.*[-]icon[-]?1?)([^"]*)')
             new_html_content = re.sub(pattern, new_path + r'\1', html_data)
-            
-            new_html_file = Path(html_file.name)
-            new_html_file.write_text(new_html_content)
+            html_path = Path(f"{all_html_path}\{html_file.name}")
+            html_path.write_text(new_html_content)
         except FileOpenError as e:
             raise (f"An error occurred while processing {html_file}: {e}")
+    print("find html file successfully")
 
-if __name__ == "__main":
+if __name__ == "__main__":
     find_html_files_and_update_icons()

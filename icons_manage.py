@@ -15,8 +15,8 @@ def find_icon_dir():
         for icon_path in png_path.glob("*icon*.png"):
             icons += f"{icon_path}\n"
             # Path.unlink(icon_path)
-
         Path('Icons.txt').write_text(icons)
+        print("change the path icon successfully")
     except CustomExceptions as e:
         raise(f"An error occurred: {e}")
 
