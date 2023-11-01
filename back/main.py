@@ -1,53 +1,77 @@
-#  part 1 done 
-# sort files by (A-Z) : done
-#find *-icon.* , *-icon-l.*
 from pathlib import Path
 
 
 
-  
+class PathNotFoundError(Exception):
+    def __init__(self):
+        msg = "Path dosn't exist"
+    def __str__(self):
+        return self.msg
+
 
 def searchSorting (address): 
     return  sorted(addrs.glob("*"))
 
-# Path.exists():
-#     pass
-addrs = Path('/Users/SMD/Desktop/GW2/MaktabsharifMiniProject3/front/images/')
+def getaddress(address):
+    ad = Path(address)
+    if not ad.exists():
+        raise PathNotFoundError
+    return ad
+
+def witre_on_txt(icon):
+    try: 
+        crdr = Path.cwd()/"icon.txt"
+        if not crdr.exists():
+            with open("icon.txt" , 'w') as file:
+                for i in icon :
+                    file.write(str(i)+"\n")
+            return "done"
+        else:
+            raise IOError  
+    except IOError as e:
+        return e
+        
+
+addrs = getaddress('/Users/SMD/Desktop/GW2/MaktabsharifMiniProject3/front/images/')
 # pathInput = input("Please Enter your Path: ")
-# address = Path.glob(addrs,recursive=True ,include_hidden=True )
+
 sorted_list = searchSorting(addrs)
-# for i in sorted_list:
-#     print(i)
-# print(sorted_list)
-
 icon = addrs.glob("*icon*")
-with open("icon.txt" , 'w') as file:
-
-    for i in icon :
-        file.write(str(i)+"\n")
-
-
-newfile = Path('.') / "icon.txt"
-with newfile.open("w") as f: f.write()
-
-a = newfile.touch()
-a.write_text()
+witre_on_txt(icon)
 
 
 
-path = Path.cwd() / "shopping_list.md"
-with path.open(mode="r", encoding="utf-8") as md_file:
-    content = md_file.read()
-    groceries = [line for line in content.splitlines() if line.startswith("*")]
-print("\n".join(groceries))
+# source = Path("hello.py")
+# destination = Path("goodbye.py")
 
-write_text() opens the path and writes string data to it
+# if not destination.exists():
+#     source.replace(destination)
+
+# create_icon = Path.cwd()/"icon.txt"
+# print(create_icon.exists())
+# if not create_icon.exists():
+#     Path.touch("icon.txt")
+
+# create_icon = Path.cwd()/"icon.txt"
+# icontxt = [i for i in create_icon]
+# with newfile.open("w") as f: f.write()
+# print(icontxt)
 
 
-from pathlib import Path
+# for i in icon:
+# create_icon.write_text(f"{i}")
+# print(create_icon)
+# create_icon.write
 
-source = Path("hello.py")
-destination = Path("goodbye.py")
+# a = newfile.touch()
+# a.write_text()
 
-if not destination.exists():
-    source.replace(destination)
+
+
+# path = Path.cwd() / "shopping_list.md"
+# with path.open(mode="r", encoding="utf-8") as md_file:
+#     content = md_file.read()
+#     groceries = [line for line in content.splitlines() if line.startswith("*")]
+# print("\n".join(groceries))
+
+
