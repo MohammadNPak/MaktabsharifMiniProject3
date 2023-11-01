@@ -45,4 +45,4 @@ with open("commit_json.json", 'w') as json_file:
     json.dump(commit_data_by_author, json_file, indent=4)
 
 print(f"commit_json file was successfully saved")
-        
+
