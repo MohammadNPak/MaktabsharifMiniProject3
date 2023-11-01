@@ -1,14 +1,16 @@
 #!/bin/bash
 
-#Q2-3
+script_dir="$(dirname "$0")"
+icons_dir="${script_dir}/front/icons"
 
-if [[ ! -d ${icons} ]]; then
-mkdir icons
+if [[ ! -d ${icons_dir} ]]; then
+  mkdir "${icons_dir}"
 fi
-data="/home/flatlife/PycharmProjects/MaktabsharifMiniProject3/icons.txt"
-file=$data
-while read -r line; do
-echo -e "$line\n"
-mv $line "/home/flatlife/PycharmProjects/MaktabsharifMiniProject3/icons"
-done <$file
 
+
+data="${script_dir}/icons.txt"
+
+while read -r line; do
+  echo -e "$line\n"
+  mv "$line" "${icons_dir}/"
+done < "$data"

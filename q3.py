@@ -2,7 +2,7 @@ import requests
 import json
 import os
 
-token = "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"
+token = "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"
 headers = {
     'Authorization': f'token {token}',
     'Accept': 'application/vnd.github+json',
