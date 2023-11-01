@@ -1,5 +1,6 @@
 from pathlib import Path
-
+from bs4 import BeautifulSoup
+import re
 
 
 class PathNotFoundError(Exception):
@@ -18,60 +19,40 @@ def getaddress(address):
         raise PathNotFoundError
     return ad
 
-def witre_on_txt(icon):
-    try: 
-        crdr = Path.cwd()/"icon.txt"
-        if not crdr.exists():
-            with open("icon.txt" , 'w') as file:
-                for i in icon :
-                    file.write(str(i)+"\n")
-            return "done"
-        else:
-            raise IOError  
-    except IOError as e:
-        return e
-        
+def witre_on_txt(filetext):
+    with open("icon.txt" , 'w') as file:
+        for i in filetext :
+            file.write(str(i)+"\n")
+    return "done"
 
 addrs = getaddress('/Users/SMD/Desktop/GW2/MaktabsharifMiniProject3/front/images/')
 # pathInput = input("Please Enter your Path: ")
 
 sorted_list = searchSorting(addrs)
+
+
+
 icon = addrs.glob("*icon*")
-witre_on_txt(icon)
+print(witre_on_txt(icon))
+
+def replace_icon_dir(html):
+    with open(html , "r")as file:
+        a = file.read()
+    return a
+    # icons = re.findall('*icon*', a)
+    # return icons
+    
 
 
 
-# source = Path("hello.py")
-# destination = Path("goodbye.py")
-
-# if not destination.exists():
-#     source.replace(destination)
-
-# create_icon = Path.cwd()/"icon.txt"
-# print(create_icon.exists())
-# if not create_icon.exists():
-#     Path.touch("icon.txt")
-
-# create_icon = Path.cwd()/"icon.txt"
-# icontxt = [i for i in create_icon]
-# with newfile.open("w") as f: f.write()
-# print(icontxt)
+# html = replace_icon_dir('/Users/SMD/Desktop/GW2/MaktabsharifMiniProject3/front/about.html')
 
 
-# for i in icon:
-# create_icon.write_text(f"{i}")
-# print(create_icon)
-# create_icon.write
-
-# a = newfile.touch()
-# a.write_text()
-
-
-
-# path = Path.cwd() / "shopping_list.md"
-# with path.open(mode="r", encoding="utf-8") as md_file:
-#     content = md_file.read()
-#     groceries = [line for line in content.splitlines() if line.startswith("*")]
-# print("\n".join(groceries))
-
-
+with open('/Users/SMD/Desktop/GW2/MaktabsharifMiniProject3/front/index.html',"r") as f:
+    data = f.read()
+    images = re.findall('(images.*-icon.*png)',data)
+    
+   
+    print(images)
+   
+    

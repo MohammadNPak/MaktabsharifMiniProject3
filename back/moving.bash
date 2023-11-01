@@ -1,10 +1,8 @@
-#! /bin/bash
+#!/bin/bash
 
-a = cat ./icon.txt
-
-for i in a :
+for i in $(cat /Users/SMD/Desktop/GW2/icon.txt) :
 do 
-mv i .front/icon/
+mv $i /Users/SMD/Desktop/GW2/MaktabsharifMiniProject3/front/icon
 done
 
 echo 'icon files have moved successfully'
