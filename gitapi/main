@@ -1,0 +1,28 @@
+import requests
+import json
+
+def get_json(url,headers = None):
+    return requests.get(url,headers=headers).json()
+
+user = "Amirznd"
+token = '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'
+headers = {
+    'Authorization': f'Bearer {token}',
+    'Accept': 'application/vnd.github+json',
+    }
+
+repos_url = f'https://api.github.com/users/{user}/repos'
+respons_repos=get_json(repos_url)
+print(respons_repos)
+
+commit_url = "https://api.github.com/repos/Amirznd/digitallab/commits"
+respons_commits = get_json(commit_url)
+
+filename='commit.json'
+
+with open(filename, 'a') as f:
+        for i in respons_commits:
+            f.write(json.dumps(i, indent=4) + '\n')
+        print(f"Commit from {i['commit']['author']['name']} saved to {filename}")
+              
+
