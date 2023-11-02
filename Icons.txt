@@ -1,0 +1,11 @@
+/Users/alora/Maktab/sending projects/hw7/untitled folder/MaktabsharifMiniProject3/front/images/call-icon.png
+/Users/alora/Maktab/sending projects/hw7/untitled folder/MaktabsharifMiniProject3/front/images/mail-icon.png
+/Users/alora/Maktab/sending projects/hw7/untitled folder/MaktabsharifMiniProject3/front/images/fb-icon.png
+/Users/alora/Maktab/sending projects/hw7/untitled folder/MaktabsharifMiniProject3/front/images/twitter-icon.png
+/Users/alora/Maktab/sending projects/hw7/untitled folder/MaktabsharifMiniProject3/front/images/like-icon.png
+/Users/alora/Maktab/sending projects/hw7/untitled folder/MaktabsharifMiniProject3/front/images/serach-icon.png
+/Users/alora/Maktab/sending projects/hw7/untitled folder/MaktabsharifMiniProject3/front/images/instagram-icon.png
+/Users/alora/Maktab/sending projects/hw7/untitled folder/MaktabsharifMiniProject3/front/images/instagram-icon-1.png
+/Users/alora/Maktab/sending projects/hw7/untitled folder/MaktabsharifMiniProject3/front/images/linkedin-icon-1.png
+/Users/alora/Maktab/sending projects/hw7/untitled folder/MaktabsharifMiniProject3/front/images/fb-icon-1.png
+/Users/alora/Maktab/sending projects/hw7/untitled folder/MaktabsharifMiniProject3/front/images/twitter-icon-1.png
